@@ -9,8 +9,8 @@ public class Swapper {
     private int attGoal = 20000;
     private int swapGoal = 2000;
     private double temperature = 400.0;
-    private double minCompat = 100.0;
-    private double maxCompat = 0.0;
+    private double minCompat;
+    private double maxCompat;
     private double meanCompat = 0.0;
 
     public void calcResults(Rooms a) {
@@ -18,6 +18,8 @@ public class Swapper {
         double dataArray[] = a.getRoomCompatData();
         double tempA = 0.0;
         double tempB = 0.0;
+        minCompat = 100.0;
+        maxCompat = 0.0;
         int numRooms = a.getNumRooms();
 
         for (int i = 0; i < numRooms; i++) {
